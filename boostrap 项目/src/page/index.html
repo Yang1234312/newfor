@@ -10,15 +10,41 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
+    <style>
+
+      div[class*=col]{
+        height: 50px;
+        border: 1px solid #333;
+      }
+    </style>
   </head>
   <body>
-    <h1>你好，世界！</h1>
+   <div class="container">
+
+     <div class="clearfix"></div>
+     <div class="col-lg-1"></div>
+     <div class="col-lg-2"></div>
+     <div class="col-lg-3"></div>
+     <div class="col-lg-4"></div>
+     <div class="col-lg-5"></div>
+     <div class="col-lg-6"></div>
+     <div class="col-lg-7"></div>
+     <div class="col-lg-8"></div>
+     <div class="col-lg-9"></div>
+     <div class="col-lg-10"></div>
+     <div class="col-lg-11"></div>
+     <div class="col-lg-12"></div>
+     <div class="clearfix"></div>
+     <h1>屏幕划分</h1>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-ss-12"></div>
+    <div class="clearfix"></div>
+    <h1>列偏移</h1>
+   <div class="col-lg-4 col-lg-offset-4"></div>
+     
+     
+
+
+   </div>
 
  
   
@@ -26,4 +52,67 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+    //   Object.is();//判断两个值是否完全相等
+    //   const obj1={
+    //     name:"atguig"
+    //   }
+    //   const obj2={
+    //     age:8
+    //   }
+    //   // Object.assign(obj1,obj2)
+    //   // console.log(obj1)
+    // obj2._proto_=obj1;
+    // console.log(obj2)
+    const school={
+      name:"尚硅谷",
+      xueke:["前端","JAVA","大数据","云计算"],
+      founder:{
+        name:'刚哥',
+        age:42
+
+      },
+      improve:function(){
+        console.log("提高性能")
+      }
+    }
+
+    function deepClone(data){
+      let type=getdatatype(data)
+      console.log(type)
+      let container
+      if(type==='Array'){
+        container=[];
+      }
+      if(type==='Object'){
+       
+        container={};
+      }
+       for(let i in data){
+        //复制目标数据的值
+       let t=getdatatype(data[i])
+       if(t=='Array' || t=='Object'){
+        container[i]=deepClone(data[i])
+
+       }
+       else if(t=='Function'){
+         container[i]=data[i].bind(container)
+       }
+       else{
+         container[i]=data[i]
+       }
+      }
+      return container
+    
+
+
+    }
+    function getdatatype(data){
+     return  Object.prototype.toString.call(data).slice(8,-1)
+
+    }
+   
+   const newSchool=deepClone(school)
+   console.log(newSchool,"新的数据")
+    </script>
 </html>
