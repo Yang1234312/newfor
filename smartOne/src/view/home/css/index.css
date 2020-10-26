@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #ededed;
+}
+.app-wrap{
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+}
+.header-topbar{
+    width: 100%;
+    height: 45px;
+    background-image: linear-gradient(90deg,#222325,#3b3c3f,#222325);
+}
+.active-meta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsla(0,0%,100%,.7);
+    font-size: 12px;
+
+}
+.active-meta p{
+    padding: 0 20px;
+    line-height: 45px;
+    cursor:pointer;
+}
+.main-wrapper{
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0,0,0,.05);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.05);
+    height: 75px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    position:sticky;
+    top:0px;
+    z-index: 999999;
+    
+
+}
+.main-title{
+    width: 100%;
+    height: 75px;
+    display: flex;
+  margin-left: 200px;
+  line-height: 75px;
+  
+}
+.main-title p{
+    padding: 0 20px;
+    transition: color .1s ease;
+    color: rgba(0,0,0,.7);
+    cursor:pointer;
+    
+}
+.swiper-container {
+    width: 1100px;
+    height: 490px;
+    margin-top: 40px;
+  
+} 
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+} 
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+} 
+.shop-formessage{
+    width: 1100px;
+    height: 200px;
+    margin:  40px auto;
+  
+    display: flex;
+
+}
+.shop-formessage img{
+    width: 24.7%;
+    height: 200px;
+    
+}
+.hot-shops{
+    width: 1100px;
+    height: 429px;
+    margin: 20px auto;
+    background: #fff;
+  
+}
+.hot-shops-meta{
+    display: block;
+    position: relative;
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: 60px;
+
+}
+.hot-shops h5{
+    margin-left: 25px;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 60px;
+    color: #666;
+}
+.every-hot-shops{
+    width: 25%;
+    height: 368px;
+    border-right:0.5px solid #ededed;
+   
+    
+}
+.every-hot-shops:hover{
+    box-shadow: darkgrey 0px 0px 30px 5px;
+}
+
+
+.every-hot-shops img{
+    width: 216px;
+    height: 216px;
+    margin: 10px auto;
+    margin-left: 5%;
+  
+}
+.Product-introduction{
+    
+    width: 216px;
+    text-overflow: ellipsis;
+    
+  
+    
+
+}
+.Product-introduction h3{
+    font-size: 14px;
+    font-weight: 700;
+   text-align: center;
+    color: #333;
+   
+  
+}
+.Product-introduction h5{
+  
+    font-size: 12px;
+    color: #999;
+}
+.hot-shop-container{
+    display: flex;
+}
+.hot-shops-price{
+    width: 216px;
+    
+}
+.hot-shops-price span{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #d44d44;
+    display: block;
+    text-align: center;
+}
+.common-normal-box{
+    width:1100px ;
+    height: 921px;
+    background: #fff;
+  
+    margin: 0 auto;
+}
+
+
+.Mobile-Accessories{
+    display: block;
+    height: 60px;
+    position: relative;
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.Mobile-Accessories h5{
+    margin-left: 25px;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 60px;
+    color: #666;
+}
